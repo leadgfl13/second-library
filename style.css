@@ -1,3 +1,42 @@
 body{
 background-color: blue;
+height:100%;
 }
+
+.page-layout{
+    height:100vh;
+    display:grid;
+    background-image:white;
+    border:2px black;
+    grid-template-columns:1fr 3fr;
+    grid-template-rows:1fr 3fr;
+}
+
+.top-left{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    Justify-content:center;
+    font-size:28px;
+    grid-area:1,1,2,2;
+    background-color:white;
+}
+
+.top-right{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    Justify-content:center;
+    font-size:48px;
+    grid-area:1,2,2,3;
+    background-color:red;
+}
+.bottom-left{
+    grid-area:2,1,3,2;
+    background-color:gray;
+}
+.bottom-right{
+    grid-area:2,2,3,3;
+    background-color:white;
+}
+
