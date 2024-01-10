@@ -7,6 +7,7 @@
     <link rel="stylesheet" href= "style.css">
     <script defer src = "script.js"></script>
 
+<!--General page layout-->
     <div class="page-layout">
         <div class="top-left">
             <button class = "addbook" id = "add">Add Book!</button>
@@ -18,7 +19,29 @@
             <div class="formbox"></div>
         </div>
 
+
+<!--Contains the form elements-->
         <div class="formcontainer" id = 'formcontainer'>I am a form container
+            <form action=""></form>
+            <div class="inputcontainer">
+                <label for="bookTitle">Book Name</label>
+                <input type="text" id = 'bookname' name ='nameofbook'>
+            </div>
+            <div class="inputcontainer">
+                <label for="bookAuthor">Author</label>
+                <input type="text" id = 'bookauthor' name ='authorofbook'>
+            </div>
+            <div class="inputcontainer">
+                <legend>Did you read it?</legend>
+                <div class = radio>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id = 'yes' name ='read'>
+                    <label for="no">No</label>
+                    <input type="radio" id = 'no' name = 'read'>
+                </div>
+                    
+            </div>
+            
 
             <button class = 'uploadBook' id = 'upBook'>
                 Add

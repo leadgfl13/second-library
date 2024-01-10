@@ -62,7 +62,7 @@ margin:0px;
     left:300px;
     height:400px;
     width:400px;
-    background-color:purple;
+    background-color:gray;
     border:2px solid green;
 }
 .formcontainer2{
@@ -75,10 +75,25 @@ margin:0px;
     width:400px;
     background-color:purple;
     border:2px solid green;
+    margin:auto;
+    text-align:left;
 }
 
-.uploadBook{
 
 
-}
+
+label, input[type = "text"]{ 
+    display: inline-block; 
+    width: 100px; 
+    text-align: left;
+ }
+
+.radio > label,input[type = 'radio']{
+
+    display:inline;
+
+    
+ }
+
+
 
