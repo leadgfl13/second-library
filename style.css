@@ -51,9 +51,36 @@ margin:0px;
     width:300px;
     border-radius:15px;
     box-shadow:2px 2px 2px 2px;
-    gap:8px;
+    gap:0px;
     margin:10px 10px;
+    display:grid;
+    grid-template-columns: .70fr 2fr;
+    grid-template-rows:repeat(1fr, auto);
+    text-align:center;
+    
 }
+
+#readlabel, #enteredread{
+    border-bottom:0px;
+
+}
+.info{
+    border-right:2px black solid;
+    border-bottom:2px black solid;
+    margin:10px;
+    margin-right:0px;
+    gap:0px;
+
+}
+
+.enteredinfo{
+    text-align:center;
+    margin:10px;
+    margin-left:0;
+    border-bottom:2px black solid;
+}
+
+
 .formcontainer{
     display:none;
     position:fixed;
@@ -85,7 +112,9 @@ margin:0px;
 }
 
 
-
+.formbox>div:nth-last-child(-n+2){
+    font-size:20px;
+}
 
 label, input[type = "text"], input[type = 'number']{ 
     display: inline-block; 
@@ -96,8 +125,6 @@ label, input[type = "text"], input[type = 'number']{
 .radio > label,input[type = 'radio']{
 
     display:inline;
-
-    
  }
 
 
