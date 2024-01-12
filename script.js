@@ -42,3 +42,20 @@ function addInfo(){
     enterP.innerHTML =bookPages.value
 
 }
+
+const myLibrary =[]
+
+function Book(title, author, pages){
+    this.title = title
+    this.author = author
+    this.pages = pages
+}
+
+function addBookToLibrary(){
+
+}
+
+const new Book(){
+
+}
+
