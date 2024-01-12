@@ -31,6 +31,7 @@ function clear(list){
 //Need function to take values and put them in form
 
 function addInfo(){
+    
     let enterT = document.getElementById('enteredtitle')
     let bookName = document.getElementById('bookTitle')
     enterT.innerHTML = bookName.value
@@ -40,10 +41,14 @@ function addInfo(){
     let enterP = document.getElementById('enteredpages')
     let bookPages = document.getElementById('pages')
     enterP.innerHTML =bookPages.value
-
+    let booky = new Book(bookName.value, bookAuthor.value, bookPages.value)
+    myLibrary.push(booky)
+    console.log(myLibrary[0])
+    makeBookCard()
+    
 }
 
-const myLibrary =[]
+const myLibrary = []
 
 function Book(title, author, pages){
     this.title = title
@@ -52,10 +57,18 @@ function Book(title, author, pages){
 }
 
 function addBookToLibrary(){
+    addInfo()
 
 }
 
-const new Book(){
 
+//need to make a function to create the div that has the book info in int.
+function makeBookCard(){
+    for(let i = 0; i<myLibrary.length; i++){
+        alert('You have a book!')
+    }
 }
+
+
+
 
