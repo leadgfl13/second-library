@@ -2,6 +2,9 @@ let main = document.getElementById('main')
 let addBook = document.getElementById('add')
 let uploadBook =document.getElementById('upBook')
 let formcontainer = document.getElementById('formcontainer')
+
+let bottomright = document.getElementById('bottomR')
+
 addBook.addEventListener('click',()=>{
     formcontainer.style.display = "flex"
     main.style.filter = 'blur(10px)'
@@ -66,6 +69,12 @@ function addBookToLibrary(){
 function makeBookCard(){
     for(let i = 0; i<myLibrary.length; i++){
         alert('You have a book!')
+        //clear function goes here
+        var thing = document.createElement('div')
+        thing.setAttribute('class','thing')
+        bottomright.append(thing)
+
+        //need to create a book card for each book, and remove all the books before populating it again
     }
 }
 

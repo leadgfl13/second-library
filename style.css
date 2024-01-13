@@ -128,4 +128,11 @@ label, input[type = "text"], input[type = 'number']{
  }
 
 
-
+.thing{
+    background-color:darkblue;
+    height:200px;
+    width:200px;
+    position:absolute;
+    top:200px;
+    left:200px;
+}
