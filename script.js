@@ -39,7 +39,7 @@ function addInfo(){
     let bookPages = document.getElementById('pages')
     let booky = new Book(bookName.value, bookAuthor.value, bookPages.value)
     myLibrary.push(booky)
-    console.log(myLibrary.length)
+    console.log(myLibrary)
 }
 
 const myLibrary = []
@@ -55,6 +55,7 @@ function Book(title, author, pages){
 
 //makes a book card using divs and info from the library
 function makeBookCard(){
+    bottomright.innerHTML = ''
     for(let i = 0; i<myLibrary.length; i++){
         alert('You have a book!')
         //clear function goes here
