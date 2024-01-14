@@ -59,9 +59,12 @@ function makeBookCard(){
     for(let i = 0; i<myLibrary.length; i++){
         alert('You have a book!')
         //clear function goes here
+        var container = document.createElement('div')
+        container.setAttribute('class','container')
+        bottomright.append(container)
         var bookcard = document.createElement('div')
         bookcard.setAttribute('class','formbox')
-        bottomright.append(bookcard)
+        container.append(bookcard)
         let titleinfo = document.createElement('div')
         titleinfo.setAttribute('class', 'info')
         titleinfo.innerHTML = "Title"
@@ -94,6 +97,14 @@ function makeBookCard(){
         enteredread.setAttribute('class','enteredinfo')
         bookcard.append(enteredread)
         enteredread.innerHTML = 'fill in'
+        let changecontainer = document.createElement('div')
+        changecontainer.setAttribute('class','changecontainer')
+        container.append(changecontainer)
+        let change = document.createElement('button')
+        change.innerHTML = 'Change Read Status'
+        changecontainer.append(change)
+        change.setAttribute('class','change')
+        
     }
 }
 
