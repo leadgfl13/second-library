@@ -17,6 +17,7 @@ uploadBook.addEventListener('click',()=>{
     main.style.filter = 'blur(0px)'
     main.style.pointerEvents = 'auto'
     addInfo()
+    makeBookCard()
     clear(fields)
 })
 
@@ -31,24 +32,14 @@ function clear(list){
     }
 }
 
-//Need function to take values and put them in form
-
+//Takes values from form and stores them in the library
 function addInfo(){
-    
-    let enterT = document.getElementById('enteredtitle')
     let bookName = document.getElementById('bookTitle')
-    enterT.innerHTML = bookName.value
-    let enterA= document.getElementById('enteredauthor')
     let bookAuthor = document.getElementById('bookAuthor')
-    enterA.innerHTML = bookAuthor.value
-    let enterP = document.getElementById('enteredpages')
     let bookPages = document.getElementById('pages')
-    enterP.innerHTML =bookPages.value
     let booky = new Book(bookName.value, bookAuthor.value, bookPages.value)
     myLibrary.push(booky)
-    console.log(myLibrary[0])
-    makeBookCard()
-    
+    console.log(myLibrary.length)
 }
 
 const myLibrary = []
@@ -59,13 +50,10 @@ function Book(title, author, pages){
     this.pages = pages
 }
 
-function addBookToLibrary(){
-    addInfo()
-
-}
 
 
-//need to make a function to create the div that has the book info in int.
+
+//makes a book card using divs and info from the library
 function makeBookCard(){
     for(let i = 0; i<myLibrary.length; i++){
         alert('You have a book!')
@@ -97,8 +85,14 @@ function makeBookCard(){
         enteredpages.setAttribute('class','enteredinfo')
         enteredpages.innerHTML = myLibrary[i].pages
         bookcard.append(enteredpages)
-
-        //need to create a book card for each book, and remove all the books before populating it again
+        let readinfo = document.createElement('div')
+        readinfo.setAttribute('class','info')
+        bookcard.append(readinfo)
+        readinfo.innerHTML = 'Read?'
+        let enteredread = document.createElement('div')
+        enteredread.setAttribute('class','enteredinfo')
+        bookcard.append(enteredread)
+        enteredread.innerHTML = 'fill in'
     }
 }
 
