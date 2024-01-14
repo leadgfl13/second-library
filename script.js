@@ -81,6 +81,14 @@ function makeBookCard(){
         enteredtitle.setAttribute('class', 'enteredinfo')
         bookcard.append(enteredtitle)
         enteredtitle.innerHTML = myLibrary[i].title
+        let authorinfo = document.createElement('div')
+        bookcard.append(authorinfo)
+        authorinfo.setAttribute('class','info')
+        authorinfo.innerHTML = 'Author'
+        let enteredauthor = document.createElement('div')
+        bookcard.append(enteredauthor)
+        enteredauthor.setAttribute('class','enteredinfo')
+        enteredauthor.innerHTML = myLibrary[i].author
 
         //need to create a book card for each book, and remove all the books before populating it again
     }
