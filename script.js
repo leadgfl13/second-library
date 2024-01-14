@@ -70,9 +70,17 @@ function makeBookCard(){
     for(let i = 0; i<myLibrary.length; i++){
         alert('You have a book!')
         //clear function goes here
-        var thing = document.createElement('div')
-        thing.setAttribute('class','thing')
-        bottomright.append(thing)
+        var bookcard = document.createElement('div')
+        bookcard.setAttribute('class','formbox')
+        bottomright.append(bookcard)
+        let titleinfo = document.createElement('div')
+        titleinfo.setAttribute('class', 'info')
+        titleinfo.innerHTML = "Title"
+        bookcard.append(titleinfo)
+        let enteredtitle = document.createElement('div')
+        enteredtitle.setAttribute('class', 'enteredinfo')
+        bookcard.append(enteredtitle)
+        enteredtitle.innerHTML = myLibrary[i].title
 
         //need to create a book card for each book, and remove all the books before populating it again
     }
