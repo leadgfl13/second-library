@@ -35,12 +35,15 @@ function clear(list){
 
 // create function to take value of either read or no read if there is a value there
 function checkRead(){
-    if(document.getElementById('yes').checked)
+    if(document.getElementById('yes').checked){
     reads = 'yes'
-console.log(reads)
+    console.log(reads)}
     if (document.getElementById('no').checked){
         reads = 'no'
         console.log(reads)
+    }
+    else{
+        reads = 'yes'
     }
     return (reads);
 
@@ -121,6 +124,14 @@ function makeBookCard(){
         changecontainer.setAttribute('class','changecontainer')
         container.append(changecontainer)
         let change = document.createElement('button')
+        change.addEventListener('click', ()=>{
+            if(enteredread.innerHTML ='yes'){
+                enteredread.innerHTML = 'no'
+            }
+            if(enteredread.innerHTML = 'no')
+            {enteredread.innerHTML= 'yes'
+            }
+        })
         change.innerHTML = 'Change Read Status'
         changecontainer.append(change)
         change.setAttribute('class','change')
