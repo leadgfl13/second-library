@@ -43,7 +43,6 @@ function checkRead(){
         console.log(reads)
     }
     else{
-        reads = 'yes'
     }
     return (reads);
 
@@ -81,7 +80,6 @@ function makeBookCard(){
     bottomright.innerHTML = ''
     for(let i = 0; i<myLibrary.length; i++){
         alert('You have a book!')
-        //clear function goes here
         var container = document.createElement('div')
         container.setAttribute('class','container')
         bottomright.append(container)
@@ -118,28 +116,42 @@ function makeBookCard(){
         readinfo.innerHTML = 'Read?'
         let enteredread = document.createElement('div')
         enteredread.setAttribute('class','enteredinfo')
+        enteredread.setAttribute('id', 'thisread')
         bookcard.append(enteredread)
         enteredread.innerHTML = myLibrary[i].read
         let changecontainer = document.createElement('div')
         changecontainer.setAttribute('class','changecontainer')
         container.append(changecontainer)
         let change = document.createElement('button')
+
         change.addEventListener('click', ()=>{
-            if(enteredread.innerHTML ='yes'){
-                enteredread.innerHTML = 'no'
-            }
-            if(enteredread.innerHTML = 'no')
-            {enteredread.innerHTML= 'yes'
-            }
+          let thisBook = myLibrary[i]
+          if(thisBook.read == 'yes'){
+            thisBook.read = 'no'
+          }
+          else if(thisBook.read =='no'){
+            thisBook.read = 'yes'
+          }
+          makeBookCard()
         })
         change.innerHTML = 'Change Read Status'
         changecontainer.append(change)
         change.setAttribute('class','change')
-
-        
+        let getRid = document.createElement('button')
+        getRid.setAttribute('class', 'change')
+        getRid.innerHTML = 'Remove Book'
+        changecontainer.append(getRid)
+        getRid.addEventListener('click', ()=>{
+            myLibrary.splice(i,1)
+            makeBookCard()
+          })
     }
+    //add a function and button to remove book
+    
+
 }
 
+//make a change function that edits the book directly, and then calls makeBookCard function to reset the books
 
 
 

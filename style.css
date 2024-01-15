@@ -166,6 +166,7 @@ label, input[type = "text"], input[type = 'number']{
     justify-content:center;
     align-items:center;
     height:auto;
+    gap:20px;
     width:auto;
     
 }
@@ -173,7 +174,7 @@ label, input[type = "text"], input[type = 'number']{
     margin-bottom:10px;
     align-items:center;
     height:40px;
-    width:200px;
+    width:100px;
     background-color:greenyellow;
     border-radius:15px;
     box-shadow:2px 2px 2px 2px;
