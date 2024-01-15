@@ -1,5 +1,4 @@
 body{
-background-color: blue;
 height:100%;
 margin:0px;
 }
@@ -10,11 +9,11 @@ margin:0px;
     background-image:white;
     border:2px black;
     grid-template-columns:.7fr 3fr;
-    grid-template-rows:1fr 3fr;
+    grid-template-rows:200px 3fr;
 }
 
 .top-left{
-    
+
     display:flex;
     flex-direction:row;
     align-items:center;
@@ -43,8 +42,11 @@ margin:0px;
 }
 .bottom-right{
     grid-area:2,2,3,3;
+    display:grid;
     background-color:white;
-}
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap:100px 20px;}
 
 .addbook{
     height:75px;
@@ -54,16 +56,9 @@ margin:0px;
     box-shadow:2px 2px 2px 2px;
 
 }
-.bookcontainer{
-    display:grid;
-    height:250px;
-    width:300px;
-    grid-template-rows: 200px 50px;
 
-
-}
 .formbox{
-    
+
     display:grid;
     grid-template-columns: .70fr 2fr;
     grid-template-rows:repeat(1fr,4);
@@ -123,9 +118,7 @@ margin:0px;
 }
 
 
-.formbox>div:nth-last-child(-n+2){
-    font-size:20px;
-}
+
 
 label, input[type = "text"], input[type = 'number']{ 
     display: inline-block; 
@@ -153,8 +146,7 @@ label, input[type = "text"], input[type = 'number']{
     display:grid;
     height:250px;
     grid-template-rows:200px 50px;
-    width:300px;
-    width:300px;
+    width:250px;
     border-radius:15px;
     box-shadow:2px 2px 2px 2px;
     gap:0px;

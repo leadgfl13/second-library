@@ -79,7 +79,6 @@ function Book(title, author, pages, read){
 function makeBookCard(){
     bottomright.innerHTML = ''
     for(let i = 0; i<myLibrary.length; i++){
-        alert('You have a book!')
         var container = document.createElement('div')
         container.setAttribute('class','container')
         bottomright.append(container)
