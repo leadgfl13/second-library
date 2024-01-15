@@ -22,7 +22,8 @@ uploadBook.addEventListener('click',()=>{
 })
 
 let fields = ['bookTitle', 'bookAuthor','pages']
-// Can I put a for loop?
+
+//Clears the data in the form field
 function clear(list){
     for (let i = 0; i<list.length; i++){
         let clearthing = document.getElementById(list[i])
@@ -32,28 +33,47 @@ function clear(list){
     }
 }
 
-//Takes values from form and stores them in the library
+// create function to take value of either read or no read if there is a value there
+function checkRead(){
+    if(document.getElementById('yes').checked)
+    reads = 'yes'
+console.log(reads)
+    if (document.getElementById('no').checked){
+        reads = 'no'
+        console.log(reads)
+    }
+    return (reads);
+
+}
+
+//Takes values from form and stores them in the library in the form of a book object
 function addInfo(){
     let bookName = document.getElementById('bookTitle')
     let bookAuthor = document.getElementById('bookAuthor')
     let bookPages = document.getElementById('pages')
-    let booky = new Book(bookName.value, bookAuthor.value, bookPages.value)
+    checkRead()
+    let booky = new Book(bookName.value, bookAuthor.value, bookPages.value, reads)
     myLibrary.push(booky)
     console.log(myLibrary)
 }
 
-const myLibrary = []
 
-function Book(title, author, pages){
+// an array to hold all of the book objects
+const myLibrary = []
+//constructor for the book 
+
+function Book(title, author, pages, read){
     this.title = title
     this.author = author
     this.pages = pages
+    this.read = read
+
 }
 
 
 
 
-//makes a book card using divs and info from the library
+//makes a book card using divs and info from the Book objects in the library array
 function makeBookCard(){
     bottomright.innerHTML = ''
     for(let i = 0; i<myLibrary.length; i++){
@@ -96,7 +116,7 @@ function makeBookCard(){
         let enteredread = document.createElement('div')
         enteredread.setAttribute('class','enteredinfo')
         bookcard.append(enteredread)
-        enteredread.innerHTML = 'fill in'
+        enteredread.innerHTML = myLibrary[i].read
         let changecontainer = document.createElement('div')
         changecontainer.setAttribute('class','changecontainer')
         container.append(changecontainer)
@@ -104,6 +124,7 @@ function makeBookCard(){
         change.innerHTML = 'Change Read Status'
         changecontainer.append(change)
         change.setAttribute('class','change')
+
         
     }
 }

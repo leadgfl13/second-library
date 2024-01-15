@@ -98,7 +98,7 @@ margin:0px;
     flex-direction:column;
     top:35%;
     left:35%;
-    height:300px;;
+    height:250px;
     width:400px;
     text-align: center;
     font-size:20px;
@@ -177,4 +177,14 @@ label, input[type = "text"], input[type = 'number']{
     background-color:greenyellow;
     border-radius:15px;
     box-shadow:2px 2px 2px 2px;
+}
+
+.uploadBook{
+    align-self:center;
+    background-color:yellowgreen;
+    box-shadow:2px 2px 2px 2px;
+    width:200px;
+    border-radius:10px;
+
+
 }
