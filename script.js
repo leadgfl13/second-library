@@ -146,12 +146,18 @@ function makeBookCard(){
             makeBookCard()
           })
     }
-    //add a function and button to remove book
     
 
 }
 
-//make a change function that edits the book directly, and then calls makeBookCard function to reset the books
 
+//function to exit out of form box
+
+let cancel = document.getElementById('cancel')
+cancel.addEventListener('click',()=>{
+    clear(fields)
+    formcontainer.style.display = 'none'
+    main.style.filter = 'blur(0px)'
+    main.style.pointerEvents = 'auto'})
 
 

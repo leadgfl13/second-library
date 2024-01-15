@@ -98,7 +98,7 @@ margin:0px;
     flex-direction:column;
     top:35%;
     left:35%;
-    height:250px;
+    height:300px;
     width:400px;
     text-align: center;
     font-size:20px;
@@ -189,3 +189,5 @@ label, input[type = "text"], input[type = 'number']{
 
 
 }
+#cancel{
+margin-top:20px;}
