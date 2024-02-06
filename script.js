@@ -62,15 +62,17 @@ function addInfo(){
 
 // an array to hold all of the book objects
 const myLibrary = []
-//constructor for the book 
 
-function Book(title, author, pages, read){
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
 
+class Book{
+    constructor(title, author, pages, read){
+        this.title = title
+        this.author = author
+        this.pages = pages
+        this. read = read
+    }
 }
+
 
 
 
